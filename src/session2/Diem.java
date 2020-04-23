@@ -23,6 +23,9 @@ public class Diem {
         System.out.print("Nhap y = ");
         y = sc.nextInt();
     }
+    public boolean trungNhau(Diem a) {
+        return (x == a.x && y == a.y);
+    }
     public void hienThi() {
         System.out.printf("(%d,%d)\n", x, y);
     }
@@ -31,10 +34,10 @@ public class Diem {
         this.y += dy;
     }
     public int giaTriX() {
-        return this.x;
+        return x;
     }
     public int giaTriY() {
-        return this.y;
+        return y;
     }
     public double khoangCach() {
         return (Math.sqrt(this.x*this.x + this.y*this.y));

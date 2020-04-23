@@ -5,12 +5,19 @@ import java.util.*;
 public class Date {
     private int ngay, thang, nam;
     public Date() {
-        this.ngay = this.thang = this.nam = 0;
+        this.ngay = 1;
+        this.thang = 1;
+        this.nam = 2000;
     }
     public Date(int ngay, int thang, int nam) {
         this.ngay = ngay;
         this.thang = thang;
         this.nam = nam;
+    }
+    public Date(Date a){
+        ngay = a.ngay;
+        thang = a.thang;
+        nam = a.nam;
     }
     public boolean hopLe() {
         int d = this.ngay, m = this.thang, y = this.nam;
@@ -72,5 +79,8 @@ public class Date {
     }
     public void in() {
         System.out.printf("%d/%d/%d\n", ngay, thang, nam);
+    }
+    public String toString() {
+        return (ngay + "/" + thang + "/" + nam);
     }
 }
