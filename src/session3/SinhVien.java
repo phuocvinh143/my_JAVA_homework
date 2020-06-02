@@ -8,7 +8,7 @@ public class SinhVien {
     private String mssv, hten;
     private Date ngSinh;
     private int sluong;
-    private String [] tenHP, diem;
+    public String [] tenHP, diem;
 
     public SinhVien(){
         mssv = "";
@@ -84,6 +84,9 @@ public class SinhVien {
     public String getHten() {
         return hten;
     }
+    public Date getNgSinh() { return ngSinh; }
+    public int getSluong() {return sluong; }
+
     public void dKy(String ten, String d){
         if(sluong < MAX ){
             tenHP[sluong]= ten;
